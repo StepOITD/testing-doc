@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="l25p7cVk1fN">
+  <start-date>2016-04-26T00:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>Task 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>Milestone 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>Group 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>Resource 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>Equipment 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>Material 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>Group 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <schedule>
+      <schedule-day day-of-week="sunday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="monday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="tuesday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="wednesday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="thursday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="friday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <schedule-day day-of-week="saturday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="61200"/>
+      </schedule-day>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes"/>
+    </schedule>
+    <child-resource idref="r1"/>
+    <child-resource idref="r2"/>
+    <child-resource idref="r3"/>
+    <child-resource idref="r4"/>
+    <child-resource idref="r5"/>
+  </resource>
+  <resource id="r1">
+    <name>王韬懿</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r2">
+    <name>张庭瑞</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r3">
+    <name>何林</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r4">
+    <name>张栋</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r5">
+    <name>安剑锋</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t1"/>
+    <child-task idref="t3"/>
+    <child-task idref="t12"/>
+    <child-task idref="t13"/>
+    <child-task idref="t14"/>
+    <child-task idref="t15"/>
+    <child-task idref="t16"/>
+    <child-task idref="t17"/>
+    <child-task idref="t18"/>
+    <child-task idref="t19"/>
+    <child-task idref="t2"/>
+    <child-task idref="t9"/>
+    <child-task idref="t10"/>
+    <child-task idref="t11"/>
+  </task>
+  <task id="t1">
+    <title>环境部署以及熟悉项目</title>
+    <effort>144000</effort>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>1.</lit>
+          </run>
+          <run>
+            <lit>全体测试成员搭建好待测项目的环境</lit>
+          </run>
+        </p>
+        <p>
+          <run>
+            <lit>2.</lit>
+          </run>
+          <run>
+            <lit>熟悉待测项目的各个功能模块</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+  </task>
+  <task id="t2">
+    <title>集成测试</title>
+    <effort>144000</effort>
+    <start-constraint-date>2016-05-05T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t3">
+    <title>单元测试之个人中心模块测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-01T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的个人中心模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2016-05-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t9">
+    <title>系统测试</title>
+    <effort>288000</effort>
+    <start-constraint-date>2016-05-10T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-10T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t10">
+    <title>文档验证</title>
+    <effort>144000</effort>
+    <start-constraint-date>2016-05-20T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-20T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t11">
+    <title>测试评估</title>
+    <effort>86400</effort>
+    <start-constraint-date>2016-05-25T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-25T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t12">
+    <title>单元测试之分类数据模块测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-01T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的分类数据模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2016-05-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t13">
+    <title>单元测试之回收站模块测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-01T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的回收站模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2016-05-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t14">
+    <title>单元测试之访问授权测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-01T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的访问授权模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t15">
+    <title>单元测试之分类授权测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-01T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的分类授权模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2016-05-01T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t16">
+    <title>单元测试之成员授权测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-03T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的成员授权模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2016-05-03T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t17">
+    <title>单元测试之行为日志测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-03T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的行为日志模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2016-05-03T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t18">
+    <title>单元测试之用户行为模块测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-03T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的用户行为模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2016-05-03T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t19">
+    <title>单元测试之用户信息模块测试</title>
+    <effort>57600</effort>
+    <start-constraint-date>2016-05-03T00:00:00.000Z</start-constraint-date>
+    <note>
+      <text>
+        <p>
+          <run>
+            <lit>对内容管理系统的用户信息模块测试</lit>
+          </run>
+        </p>
+      </text>
+    </note>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2016-05-03T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>
